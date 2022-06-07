@@ -1,18 +1,12 @@
 {
   "compilerOptions": {
     "module": "commonjs",
-    "outDir": "bin",
+    "declaration": true,
+    "outDir": "dist",
     "sourceMap": true,
     "strict": true,
-    "target": "ES6",
-    "lib": ["ES6"],
-    "experimentalDecorators": true,
-    "emitDecoratorMetadata": true,
+    "target": "ES5",
     "esModuleInterop": true,
-    "moduleResolution": "node",
-    "strictPropertyInitialization": false,
-    "allowSyntheticDefaultImports": true,
-    "resolveJsonModule": true,
     "types": [
       "node"
     ],
@@ -22,5 +16,4 @@
   "include": [
     "src"
   ],
-
 }

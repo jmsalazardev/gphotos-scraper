@@ -1,7 +1,7 @@
-import { Album } from "../interfaces";
-import { getAlbum } from "./getAlbum";
-import { AlbumNotFoundException } from "../exceptions";
-import { getPhotos } from "./getPhotos";
+import { Album } from '../interfaces';
+import { getAlbum } from './getAlbum';
+import { AlbumNotFoundException } from '../exceptions';
+import { getPhotos } from './getPhotos';
 
 export const extractAlbum = async (albumUrl: string): Promise<Album> => {
   const gAlbum = await getAlbum(albumUrl);
@@ -24,7 +24,7 @@ export const extractAlbum = async (albumUrl: string): Promise<Album> => {
     const ids = chunk.map((el) => el.id);
     const photosInfo = await getPhotos(key, ids);
     album.photos.push(...photosInfo.map((el) => {
-      const url = itemsMap.get(el.id) || "";
+      const url = itemsMap.get(el.id) || '';
       return {...el, url};
     }));
   }

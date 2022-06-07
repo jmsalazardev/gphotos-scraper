@@ -1,17 +1,19 @@
 {
   "name": "gphotos-scraper",
-  "version": "1.0.1",
-  "description": "A tool to extract photos metadata from an google photos shared album",
-  "main": "bin/index.js",
+  "version": "1.0.2",
+  "description": "A tool to extract public url and metadata from shared album",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "bin": {
-    "gphotos-scraper": "./bin/index.js"
+    "gphotos-scraper": "./dist/cli.js"
   },
   "scripts": {
     "lint": "eslint --ext .ts .",
     "lint:fix": "eslint --fix --ext .ts .",
     "build": "tsc",
     "build:watch": "tsc -w",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepublish": "npm run build"
   },
   "repository": {
     "type": "git",
@@ -22,6 +24,7 @@
     "name": "José Miguel Salazar",
     "email": "contacto@jmsalazar.dev"
   },
+  "keywords": ["google-photos", "scraper"],
   "bugs": {
     "url": "https://github.com/jmsalazardev/gphotos-scraper/issues"
   },

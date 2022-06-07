@@ -17,16 +17,11 @@
     "sourceType": "module"
   },
   "ignorePatterns": [
-    "/lib/**/*" // Ignore built files.
+    "/dist/**/*" // Ignore built files.
   ],
   "plugins": [
     "@typescript-eslint",
     "import"
   ],
-  "rules": {
-    "quotes": ["error", "double"],
-    "import/no-unresolved": 0,
-    "require-jsdoc": 0,
-    "new-cap": [2, {"capIsNewExceptions": ["Service", "Inject"]}]
-  }
+  "rules": {}
 }
