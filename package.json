@@ -1,5 +1,5 @@
 {
-  "name": "@jmsalazardev/gphotos-scraper",
+  "name": "gphotos-scraper",
   "version": "2.0.0",
   "description": "A tool to extract public url and metadata from shared album",
   "main": "dist/index.js",
@@ -7,6 +7,7 @@
   "bin": {
     "gphotos-scraper": "./dist/cli.js"
   },
+  "private": false,
   "scripts": {
     "lint": "eslint --ext .ts .",
     "lint:fix": "eslint --fix --ext .ts .",
@@ -49,8 +50,5 @@
     "clear": "^0.1.0",
     "commander": "^9.3.0",
     "mime-types": "^2.1.35"
-  },
-  "publishConfig": {
-    "@jmsalazardev:registry": "https://npm.pkg.github.com"
   }
 }
