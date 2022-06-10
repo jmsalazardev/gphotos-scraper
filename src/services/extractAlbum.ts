@@ -7,7 +7,7 @@ export const extractAlbum = async (albumUrl: string): Promise<Album> => {
   const gAlbum = await getAlbum(albumUrl);
   if (!gAlbum) throw new AlbumNotFoundException();
 
-  const { items, key, id, title } = gAlbum;
+  const { items, key, id, title, cover, createdAt, updatedAt } = gAlbum;
 
   const itemsMap = items.reduce((map, item) => map.set(item.id, item.url), new Map<string, string>());
 
@@ -16,6 +16,8 @@ export const extractAlbum = async (albumUrl: string): Promise<Album> => {
     title,
     url: albumUrl,
     photos: [],
+    createdAt,
+    updatedAt,
   };
 
   const chunkSize = 500;
@@ -30,5 +32,6 @@ export const extractAlbum = async (albumUrl: string): Promise<Album> => {
   }
 
   album.photos.sort((a, b) => b.createdAt - a.createdAt);
+  album.cover = album.photos.find((photo) => photo.url === cover.url);
   return album;
 }

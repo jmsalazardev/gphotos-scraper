@@ -1,6 +1,6 @@
 {
   "name": "gphotos-scraper",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "description": "A tool to extract public url and metadata from shared album",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -24,14 +24,19 @@
     "name": "José Miguel Salazar",
     "email": "contacto@jmsalazar.dev"
   },
-  "keywords": ["google-photos", "scraper"],
+  "keywords": [
+    "google-photos",
+    "scraper"
+  ],
   "bugs": {
     "url": "https://github.com/jmsalazardev/gphotos-scraper/issues"
   },
   "homepage": "https://github.com/jmsalazardev/gphotos-scraper#readme",
   "devDependencies": {
+    "@types/clear": "^0.1.2",
+    "@types/jsdom": "^16.2.14",
     "@types/mime-types": "^2.1.1",
-    "@types/node": "^17.0.40",
+    "@types/node": "^17.0.41",
     "@typescript-eslint/eslint-plugin": "^5.27.1",
     "@typescript-eslint/parser": "^5.27.1",
     "eslint": "^8.17.0",
@@ -39,12 +44,10 @@
     "typescript": "^4.7.3"
   },
   "dependencies": {
-    "@types/clear": "^0.1.2",
     "axios": "^0.27.2",
     "cheerio": "^1.0.0-rc.11",
     "clear": "^0.1.0",
     "commander": "^9.3.0",
-    "json5": "^2.2.1",
     "mime-types": "^2.1.35"
   }
 }
