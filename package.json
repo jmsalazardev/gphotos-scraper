@@ -49,5 +49,8 @@
     "clear": "^0.1.0",
     "commander": "^9.3.0",
     "mime-types": "^2.1.35"
+  },
+  "publishConfig": {
+    "@jmsalazardev:registry": "https://npm.pkg.github.com"
   }
 }
